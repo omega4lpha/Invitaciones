@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Asistencia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Hola, {{ invitacion.nombre }}</h1>
+        <p>¿Confirmas tu asistencia al evento?</p>
+        <form action="{{ url_for('confirmar', token=invitacion.token) }}" method="POST">
+            <button type="submit" class="btn btn-success">Confirmar Asistencia</button>
+        </form>
+    </div>
+</body>
+</html>

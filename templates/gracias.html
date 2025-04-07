@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por Confirmar!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>¡Muchas gracias por confirmar tu asistencia!</h1>
+        <p>Estamos emocionados de verte en el evento.</p>
+        <p>Si por algún motivo no puedes asistir, puedes cancelar haciendo clic en el siguiente botón:</p>
+        <form action="{{ url_for('cancelar_asistencia', token=invitacion.token) }}" method="POST">
+            <button type="submit" class="btn btn-danger">Cancelar Asistencia</button>
+        </form>
+    </div>
+</body>
+</html>
